@@ -1,28 +1,29 @@
 ---
-roms_tools_version: 1.3.0
+roms_tools_version: 2.0.0
 ---
 Grid:
-  N: 8
-  center_lat: 60
-  center_lon: -5
-  hc: 300.0
-  hmin: 5.0
   nx: 8
   ny: 8
-  rot: 10
   size_x: 400
   size_y: 400
-  theta_b: 2.0
+  center_lon: -5
+  center_lat: 60
+  rot: 10
+  N: 8
   theta_s: 5.0
-  topography_source: ETOPO5
+  theta_b: 2.0
+  hc: 300.0
+  topography_source:
+    name: ETOPO5
+  hmin: 5.0
 SurfaceForcing:
-  correct_radiation: false
+  start_time: '2012-01-01T12:00:00'
   end_time: '2012-01-01T12:10:00'
-  model_reference_date: '2000-01-01T00:00:00'
   source:
     climatology: false
     name: CESM_REGRIDDED
     path: roms_tools_datasets/CESM_BGC_SURFACE_2012.nc
-  start_time: '2012-01-01T12:00:00'
   type: bgc
+  correct_radiation: false
   use_coarse_grid: false
+  model_reference_date: '2000-01-01T00:00:00'
