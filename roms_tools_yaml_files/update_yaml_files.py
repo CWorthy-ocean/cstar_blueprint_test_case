@@ -35,7 +35,7 @@ roms_grd = rt.Grid.from_yaml("roms_grd.yaml")
 roms_grd.to_yaml("updated/roms_grd.yaml")
 
 ## Tides
-roms_tides = rt.Grid.from_yaml("roms_tides.yaml")
+roms_tides = rt.TidalForcing.from_yaml("roms_tides.yaml")
 roms_tides.to_yaml("updated/roms_tides.yaml")
 
 ## Initial Conditions

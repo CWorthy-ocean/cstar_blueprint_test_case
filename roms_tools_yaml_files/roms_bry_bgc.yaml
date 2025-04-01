@@ -1,5 +1,5 @@
 ---
-roms_tools_version: 2.4.0
+roms_tools_version: 2.5.0
 ---
 Grid:
   nx: 8
@@ -32,3 +32,4 @@ BoundaryForcing:
   apply_2d_horizontal_fill: false
   adjust_depth_for_sea_surface_height: false
   model_reference_date: '2000-01-01T00:00:00'
+  bypass_validation: false
