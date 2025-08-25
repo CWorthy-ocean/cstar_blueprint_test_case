@@ -1,5 +1,5 @@
 ---
-roms_tools_version: 2.5.0
+roms_tools_version: 3.1.2
 ---
 Grid:
   nx: 8
@@ -20,14 +20,14 @@ BoundaryForcing:
   start_time: '2012-01-01T12:00:00'
   end_time: '2012-01-01T12:10:00'
   boundaries:
+    south: true
     east: true
     north: true
-    south: true
     west: true
   source:
-    climatology: false
     name: GLORYS
     path: roms_tools_datasets/GLORYS_NA_2012.nc
+    climatology: false
   type: physics
   apply_2d_horizontal_fill: false
   adjust_depth_for_sea_surface_height: false
