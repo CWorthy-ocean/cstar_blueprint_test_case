@@ -17,6 +17,9 @@ if not dataset_dir.exists():
             "ERA5_NA_2012.nc": "d07fa7450869dfd3aec54411777a5f7de3cb3ec21492eec36f4980e220c51757",
             "CESM_BGC_2012.nc": "e374d5df3c1be742d564fd26fd861c2d40af73be50a432c51d258171d5638eb6",
             "CESM_BGC_SURFACE_2012.nc": "3c4d156adca97909d0fac36bf50b99583ab37d8020d7a3e8511e92abf2331b38",
+            "global_grid_tpxo10.v2.nc": "26eb97cd135cd6f2b4e894c5f11bf7f860ff19cec8dbaa9190e37d30ee6e744e",
+            "global_h_tpxo10.v2.nc": "ef60fae6d52fa514dcc59a737435d74aa798dc114b57f01b123aa39dbaffc592",
+            "global_u_tpxo10.v2.nc": "022e57e6287e51f52eb1e5296614b1086e0e22ecd0bd57c9fd8d0e155babf5c3",
         },
     )
     pup_test_data.fetch("GLORYS_NA_2012.nc")

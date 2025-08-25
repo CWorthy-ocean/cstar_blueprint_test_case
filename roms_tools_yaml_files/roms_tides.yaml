@@ -20,9 +20,9 @@ TidalForcing:
   source:
     name: TPXO
     path:
-      grid: /Users/dafyddstephenson/Code/roms_tools_datasets/TPXO10.v2/grid_tpxo10v2.nc
-      h: /Users/dafyddstephenson/Code/roms_tools_datasets/TPXO10.v2/h_tpxo10.v2.nc
-      u: /Users/dafyddstephenson/Code/roms_tools_datasets/TPXO10.v2/u_tpxo10.v2.nc
-  ntides: 2
+      grid: roms_tools_datasets/global_grid_tpxo10.v2.nc
+      h: roms_tools_datasets/global_h_tpxo10.v2.nc
+      u: roms_tools_datasets/global_u_tpxo10.v2.nc
+  ntides: 1
   model_reference_date: '2000-01-01T00:00:00'
   bypass_validation: false

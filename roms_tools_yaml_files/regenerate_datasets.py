@@ -18,14 +18,17 @@ netcdf_path: Path | None = Path.cwd() / "../input_datasets/ROMS"
 # Input
 test_dataset_dir = Path("roms_tools_datasets")
 full_dataset_dir = Path("~/Code/roms_tools_datasets").expanduser()
-GLORYS_path = test_dataset_dir/"GLORYS_NA_2012.nc"
-BGC_path = test_dataset_dir/"CESM_BGC_2012.nc"
-BGC_frc_path = test_dataset_dir/"CESM_BGC_SURFACE_2012.nc"
-ERA5_path = test_dataset_dir/"ERA5_NA_2012.nc"
+GLORYS_path = test_dataset_dir / "GLORYS_NA_2012.nc"
+BGC_path = test_dataset_dir / "CESM_BGC_2012.nc"
+BGC_frc_path = test_dataset_dir / "CESM_BGC_SURFACE_2012.nc"
+ERA5_path = test_dataset_dir / "ERA5_NA_2012.nc"
 tpxo_dict = {
-    "grid": full_dataset_dir / "TPXO10.v2/grid_tpxo10v2.nc",
-    "h": full_dataset_dir / "TPXO10.v2/h_tpxo10.v2.nc",
-    "u": full_dataset_dir / "TPXO10.v2/u_tpxo10.v2.nc"
+    "grid": test_dataset_dir / "global_grid_tpxo10.v2.nc",
+    "h": test_dataset_dir / "global_h_tpxo10.v2.nc",
+    "u": test_dataset_dir / "global_u_tpxo10.v2.nc"
+    # "grid": full_dataset_dir / "TPXO10.v2/grid_tpxo10v2.nc",
+    # "h": full_dataset_dir / "TPXO10.v2/h_tpxo10.v2.nc",
+    # "u": full_dataset_dir / "TPXO10.v2/u_tpxo10.v2.nc"
 }
 
 # %% Grid
@@ -34,9 +37,9 @@ from roms_tools import Grid
 
 roms_grd = Grid(nx=8,ny=8,size_x=400,size_y=400,center_lat=60,center_lon=-5,rot=10,N=8)
 if yaml_path:
-    roms_grd.to_yaml(yaml_path/"roms_grd.yaml")
+    roms_grd.to_yaml(yaml_path / "roms_grd.yaml")
 if netcdf_path:
-    roms_grd.save(netcdf_path/"roms_grd.nc")
+    roms_grd.save(netcdf_path / "roms_grd.nc")
 # %% Tides
 
 
@@ -44,8 +47,8 @@ from roms_tools import TidalForcing
 
 roms_tides = TidalForcing(
     grid=roms_grd,
-    ntides=2,
-    source={"name":"TPXO","path":tpxo_dict}
+    ntides=1,
+    source={"name": "TPXO", "path": tpxo_dict}
 )
 if yaml_path:
     roms_tides.to_yaml(yaml_path / "roms_tides.yaml")
