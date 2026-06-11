@@ -14,22 +14,13 @@ discretization:
 compile_time_code:
   location: additional_code/ROMS/compile_time_code
   files:
-    - "bgc.opt"
-    - "bulk_frc.opt"
     - "cppdefs.opt"
-    - "diagnostics.opt"
-    - "ocean_vars.opt"
-    - "param.opt"
-    - "tides.opt"
-    - "tracers.opt"
-    - "Makefile"
 runtime_code:
   location: additional_code/ROMS/runtime_code
   files:
-    - "roms.in_TEMPLATE"
     - "marbl_in"
-    - "marbl_tracer_output_list"
-    - "marbl_diagnostic_output_list"
+    - "namelist.nml"
+
 model_grid:
   location: 'roms_tools_yaml_files/roms_grd.yaml'
 initial_conditions:
