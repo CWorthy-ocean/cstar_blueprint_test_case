@@ -1,5 +1,5 @@
 ---
-roms_tools_version: 2.5.0
+roms_tools_version: 3.1.2
 ---
 Grid:
   nx: 8
@@ -20,11 +20,12 @@ SurfaceForcing:
   start_time: '2012-01-01T12:00:00'
   end_time: '2012-01-01T12:10:00'
   source:
-    climatology: false
     name: ERA5
     path: roms_tools_datasets/ERA5_NA_2012.nc
+    climatology: false
   type: physics
-  correct_radiation: false
+  correct_radiation: true
+  wind_dropoff: false
   coarse_grid_mode: never
   model_reference_date: '2000-01-01T00:00:00'
   bypass_validation: false
