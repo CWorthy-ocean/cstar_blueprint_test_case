@@ -151,7 +151,7 @@
     mmm = 8
     np_eta = 2
     np_xi = 2
-    nt_bgc = 26
+    nt_bgc = 32
     nt_passive = 0
     nz = 8
 /
